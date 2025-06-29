@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Code, Linkedin, Mail } from 'lucide-react';
+import { Plane, Code, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Team: React.FC = () => {
@@ -8,9 +8,12 @@ const Team: React.FC = () => {
       name: 'Brian Lembuss',
       role: 'CEO & Co-founder',
       description: 'B.Sc, M.Sc Aerospace Engineering. Experienced in UAS systems and business development.',
-      icon: Award,
+      icon: Plane,
       expertise: ['UAS Systems', 'Business Development', 'Aerospace Engineering'],
-      gradient: 'from-kipepeo-green to-kipepeo-dark-green'
+      gradient: 'from-kipepeo-green to-kipepeo-dark-green',
+      email: 'mailto:lembuss@kipepeo.space',
+      linkedin: 'https://www.linkedin.com/in/brian-kipchumba-lembuss-kirwa/'
+
     },
     {
       name: 'Adrian Kiplimo',
@@ -18,7 +21,9 @@ const Team: React.FC = () => {
       description: 'B.Sc Computer Science. Experienced in IoT, full-stack software, and embedded systems.',
       icon: Code,
       expertise: ['IoT Development', 'Full-Stack Software', 'Embedded Systems'],
-      gradient: 'from-kipepeo-black to-kipepeo-green'
+      gradient: 'from-kipepeo-black to-kipepeo-green',
+      email: 'mailto:akiplimo@kipepeo.space',
+      linkedin: 'https://www.linkedin.com/in/adrian-kiplimo/'
     }
   ];
 
@@ -56,7 +61,7 @@ const Team: React.FC = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
                 whileHover={{ y: -10 }}
               >
@@ -64,16 +69,16 @@ const Team: React.FC = () => {
                 <div className={`bg-gradient-to-br ${founder.gradient} p-8 text-white relative overflow-hidden`}>
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16" />
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12" />
-                  
+
                   <div className="relative z-10 text-center">
-                    <motion.div 
+                    <motion.div
                       className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl w-20 h-20 mx-auto mb-6"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
                     >
                       <founder.icon className="h-12 w-12 text-white" />
                     </motion.div>
-                    
+
                     <h3 className="text-2xl md:text-3xl font-bold font-heading mb-2">
                       {founder.name}
                     </h3>
@@ -110,21 +115,28 @@ const Team: React.FC = () => {
 
                   {/* Contact Icons */}
                   <div className="flex justify-center space-x-4 mt-6 pt-6 border-t border-gray-100">
-                    <motion.button
+                    <motion.a
+                      href={founder.email}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="p-3 bg-gray-100 hover:bg-kipepeo-green hover:text-white rounded-full transition-all duration-300"
                     >
                       <Mail className="h-5 w-5" />
-                    </motion.button>
-                    <motion.button
+                    </motion.a>
+                    <motion.a
+                      href={founder.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       className="p-3 bg-gray-100 hover:bg-kipepeo-green hover:text-white rounded-full transition-all duration-300"
                     >
                       <Linkedin className="h-5 w-5" />
-                    </motion.button>
+                    </motion.a>
                   </div>
+
                 </div>
               </motion.div>
             </motion.div>

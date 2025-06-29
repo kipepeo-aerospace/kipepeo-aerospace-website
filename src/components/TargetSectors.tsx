@@ -7,10 +7,10 @@ const TargetSectors: React.FC = () => {
     {
       icon: Wheat,
       title: 'Agriculture Sector',
-      description: 'UAS for data collection, crop spraying, and precision farming',
+      description: 'UAS for data collection and precision farming',
       color: 'from-green-400 to-green-600',
       bgColor: 'bg-green-50',
-      features: ['Crop Monitoring', 'Precision Spraying', 'Yield Analysis']
+      features: ['Crop Monitoring', 'Soil Health Analysis', 'Yield Prediction']
     },
     {
       icon: Shield,
@@ -65,7 +65,7 @@ const TargetSectors: React.FC = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden h-full"
                 whileHover={{ y: -10 }}
               >
@@ -73,7 +73,7 @@ const TargetSectors: React.FC = () => {
                 <div className={`${sector.bgColor} p-8 relative overflow-hidden`}>
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full -translate-y-16 translate-x-16" />
                   <div className="relative z-10">
-                    <motion.div 
+                    <motion.div
                       className={`bg-gradient-to-br ${sector.color} p-4 rounded-2xl w-16 h-16 mb-6 shadow-lg`}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}

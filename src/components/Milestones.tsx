@@ -14,21 +14,21 @@ const Milestones: React.FC = () => {
     {
       year: '2024',
       title: 'Company Founded',
-      description: 'Company formally founded, pilot prototype development begins',
+      description: 'Company formally founded, pilot prototype development for Kilimo Anga flagship project begins',
       icon: CheckCircle,
       status: 'completed'
     },
     {
       year: '2025',
-      title: 'Workspace Launch',
-      description: 'Workspace launched, testing of first prototype',
+      title: 'Prototype Launch',
+      description: 'Targeting pre-seed funding for Kilimo Anga prototype testing, developing partnerships in the sector',
       icon: Clock,
       status: 'current'
     },
     {
       year: '2026',
       title: 'First Demo',
-      description: 'First public demo flight and funding round',
+      description: 'First public demo flight and funding round to enable scaling of the Kilimo Anga initiative',
       icon: Star,
       status: 'upcoming'
     },
@@ -69,7 +69,7 @@ const Milestones: React.FC = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-0.5 top-0 bottom-0 w-1 bg-gradient-to-b from-kipepeo-green via-kipepeo-black to-kipepeo-green hidden md:block" />
-            
+
             {milestones.map((milestone, index) => (
               <motion.div
                 key={index}
@@ -77,19 +77,17 @@ const Milestones: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className={`relative flex items-center mb-12 md:mb-16 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex items-center mb-12 md:mb-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Timeline Node */}
-                <motion.div 
-                  className={`absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 z-10 w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
-                    milestone.status === 'completed' 
-                      ? 'bg-gradient-to-br from-kipepeo-green to-kipepeo-dark-green text-white' 
-                      : milestone.status === 'current'
+                <motion.div
+                  className={`absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 z-10 w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${milestone.status === 'completed'
+                    ? 'bg-gradient-to-br from-kipepeo-green to-kipepeo-dark-green text-white'
+                    : milestone.status === 'current'
                       ? 'bg-gradient-to-br from-yellow-400 to-orange-500 text-white animate-pulse-slow'
                       : 'bg-white border-4 border-gray-300 text-gray-400'
-                  }`}
+                    }`}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -97,10 +95,9 @@ const Milestones: React.FC = () => {
                 </motion.div>
 
                 {/* Content Card */}
-                <motion.div 
-                  className={`ml-28 md:ml-0 md:w-5/12 ${
-                    index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
-                  }`}
+                <motion.div
+                  className={`ml-28 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'
+                    }`}
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >

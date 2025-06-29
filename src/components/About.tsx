@@ -21,7 +21,7 @@ const About: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.div 
+            <motion.div
               className="inline-flex items-center justify-center mb-8"
               whileHover={{ scale: 1.1, rotate: 360 }}
               transition={{ duration: 0.6 }}
@@ -30,8 +30,8 @@ const About: React.FC = () => {
                 <Target className="h-10 w-10 text-white" />
               </div>
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-kipepeo-black mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ const About: React.FC = () => {
             className="bg-gradient-to-br from-kipepeo-cream to-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-200"
           >
             <p className="text-xl md:text-2xl text-kipepeo-black leading-relaxed text-center font-light">
-              Kipepeo Aerospace is a Kenyan startup committed to closing the production gap in Kenya's unmanned aircraft systems (UAS) industry. Founded in 2024, we design and develop drone solutions that are{' '}
+              Kipepeo Aerospace is a Kenyan drone-tech startup committed to closing the production gap in Kenya's unmanned aircraft systems (UAS) industry. Founded in 2024, we design and develop drone solutions that are{' '}
               <span className="font-semibold text-kipepeo-green">adaptable</span>,{' '}
               <span className="font-semibold text-kipepeo-green">innovative</span>, and{' '}
               <span className="font-semibold text-kipepeo-green">user-focused</span>—setting new standards of engineering excellence in Africa's aerospace sector.

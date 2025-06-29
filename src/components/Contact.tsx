@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
       icon: Mail,
       title: 'Email',
       value: 'lembuss@kipepeo.space',
-      href: 'mailto:lembuss@kipepeo.space'
+      href: 'mailto:info@kipepeo.space'
     },
     {
       icon: Globe,
@@ -49,21 +49,18 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.div 
+            <motion.div
               className="flex items-center justify-center space-x-4 mb-8"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="bg-white/20 backdrop-blur-sm p-3 rounded-2xl">
-                <Plane className="h-12 w-12 text-white" />
-              </div>
-              <div className="text-left">
-                <h3 className="text-3xl md:text-4xl font-bold font-heading">Kipepeo Aerospace</h3>
-                <p className="text-lg text-green-200">Engineering Excellence for Africa's Skies</p>
+
+              <div className="w-48 h-auto">
+                <img src="/assets/kipepeologoREMASTEREDTEXTwhite.svg" className="w-full h-auto" alt="Kipepeo Aerospace Logo" />
               </div>
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               className="text-4xl md:text-5xl font-bold font-heading mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +91,7 @@ const Contact: React.FC = () => {
                   whileHover={{ y: -5, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="bg-white/20 p-4 rounded-2xl w-fit mx-auto mb-4"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
@@ -126,7 +123,7 @@ const Contact: React.FC = () => {
                 Whether you're interested in our agricultural solutions, government applications, or research collaborations, we'd love to hear from you.
               </p>
               <motion.a
-                href="mailto:lembuss@kipepeo.space"
+                href="mailto:info@kipepeo.space"
                 className="inline-flex items-center space-x-3 bg-white text-kipepeo-black hover:bg-kipepeo-light-green hover:text-kipepeo-black px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-2xl group"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -146,10 +143,10 @@ const Contact: React.FC = () => {
             className="border-t border-white/20 pt-8 text-center"
           >
             <p className="text-green-200 text-sm mb-4">
-              © 2024 Kipepeo Aerospace. All rights reserved.
+              © 2025 Kipepeo Aerospace. All rights reserved.
             </p>
             <p className="text-green-300 text-xs max-w-2xl mx-auto">
-              This website provides general information about Kipepeo Aerospace. 
+              This website provides general information about Kipepeo Aerospace.
               For specific technical details and service agreements, please contact us directly.
             </p>
           </motion.div>

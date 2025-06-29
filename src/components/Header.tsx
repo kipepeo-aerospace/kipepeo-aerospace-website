@@ -34,37 +34,22 @@ const Header: React.FC = () => {
   return (
     <>
       {/* Navigation */}
-      <motion.nav 
+      <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          : 'bg-transparent'
+          }`}
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-4" >
           <div className="flex items-center justify-between">
-            <motion.div 
+            <motion.div
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
             >
-              <div className={`p-2 rounded-lg transition-colors duration-300 ${
-                isScrolled ? 'bg-kipepeo-green' : 'bg-white/20'
-              }`}>
-                <Plane className={`h-8 w-8 ${isScrolled ? 'text-white' : 'text-white'}`} />
-              </div>
               <div>
-                <h1 className={`text-xl font-bold font-heading transition-colors duration-300 ${
-                  isScrolled ? 'text-kipepeo-black' : 'text-white'
-                }`}>
-                  Kipepeo Aerospace
-                </h1>
-                <p className={`text-xs transition-colors duration-300 ${
-                  isScrolled ? 'text-kipepeo-green' : 'text-green-200'
-                }`}>
-                  Founded 2024
-                </p>
+                <img src="/assets/kipepeologoREMASTERED.png" className="h-20 w-50" alt="Kipepeo Aerospace Logo" />
               </div>
             </motion.div>
 
@@ -74,11 +59,10 @@ const Header: React.FC = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`font-medium transition-colors duration-300 hover:scale-105 transform ${
-                    isScrolled 
-                      ? 'text-kipepeo-black hover:text-kipepeo-green' 
-                      : 'text-white hover:text-kipepeo-light-green'
-                  }`}
+                  className={`font-medium transition-colors duration-300 hover:scale-105 transform ${isScrolled
+                    ? 'text-kipepeo-black hover:text-kipepeo-green'
+                    : 'text-white hover:text-kipepeo-light-green'
+                    }`}
                 >
                   {item.label}
                 </button>
@@ -87,11 +71,10 @@ const Header: React.FC = () => {
                 href="https://kilimoanga.kipepeo.space"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${
-                  isScrolled
-                    ? 'bg-kipepeo-green hover:bg-kipepeo-dark-green text-white'
-                    : 'bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm'
-                }`}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${isScrolled
+                  ? 'bg-kipepeo-green hover:bg-kipepeo-dark-green text-white'
+                  : 'bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm'
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -103,9 +86,8 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
-                isScrolled ? 'text-kipepeo-black' : 'text-white'
-              }`}
+              className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${isScrolled ? 'text-kipepeo-black' : 'text-white'
+                }`}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -114,7 +96,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200"
@@ -146,27 +128,27 @@ const Header: React.FC = () => {
       {/* Hero Section */}
       <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`
           }}
         />
         <div className="absolute inset-0 bg-hero-pattern" />
-        
+
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div 
+          <motion.div
             className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full"
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           />
-          <motion.div 
+          <motion.div
             className="absolute top-40 right-20 w-16 h-16 bg-kipepeo-light-green/20 rounded-full"
             animate={{ y: [0, 20, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           />
-          <motion.div 
+          <motion.div
             className="absolute bottom-40 left-20 w-12 h-12 bg-white/15 rounded-full"
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
@@ -181,14 +163,14 @@ const Header: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-5xl mx-auto"
           >
-            <motion.h1 
+            <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-8 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               Engineering Excellence for
-              <motion.span 
+              <motion.span
                 className="block text-kipepeo-light-green"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -197,16 +179,16 @@ const Header: React.FC = () => {
                 Africa's Skies
               </motion.span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-xl md:text-2xl lg:text-3xl mb-12 text-green-100 max-w-3xl mx-auto font-light leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Custom drone-tech solutions from Kenya to the continent.
+              Building Drone Technology to Deliver Smarter, Sustainable Solutions .
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -224,7 +206,7 @@ const Header: React.FC = () => {
                 <span>Visit Kilimo Anga</span>
                 <ExternalLink className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </motion.a>
-              
+
               <motion.button
                 onClick={() => scrollToSection('about')}
                 className="inline-flex items-center space-x-2 border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 backdrop-blur-sm hover:bg-white/10"
@@ -238,7 +220,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
