@@ -18,8 +18,8 @@ function App() {
       <CoreValues />
       <Milestones />
       <TargetSectors />
-      <FlagshipProject />
       <Team />
+      <FlagshipProject />
       <Contact />
     </div>
   );

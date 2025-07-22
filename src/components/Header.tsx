@@ -131,7 +131,8 @@ const Header: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`
+            backgroundImage: "url('/assets/TAI_Top.png')",
+            /* backgroundImage: `url('https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`*/
           }}
         />
         <div className="absolute inset-0 bg-hero-pattern" />

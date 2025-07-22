@@ -1,12 +1,12 @@
 import React from 'react';
-import { Eye, Zap, Globe } from 'lucide-react';
+import { Eye, Code, Wrench, Plane } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Vision: React.FC = () => {
   const highlights = [
-    { icon: Zap, text: 'Aerospace Engineering' },
-    { icon: Globe, text: 'IoT Technologies' },
-    { icon: Eye, text: 'Software Innovation' },
+    { icon: Plane, text: 'Aerospace Systems' },
+    { icon: Wrench, text: 'Hardware Development' },
+    { icon: Code, text: 'Software Innovation' },
   ];
 
   return (
@@ -26,7 +26,7 @@ const Vision: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <motion.div 
+            <motion.div
               className="inline-flex items-center justify-center mb-8"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
@@ -35,8 +35,8 @@ const Vision: React.FC = () => {
                 <Eye className="h-10 w-10 text-white" />
               </div>
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-kipepeo-black mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

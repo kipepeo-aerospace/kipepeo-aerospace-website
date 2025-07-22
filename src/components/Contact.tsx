@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'lembuss@kipepeo.space',
+      value: 'info@kipepeo.space',
       href: 'mailto:info@kipepeo.space'
     },
     {
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
             >
 
               <div className="w-48 h-auto">
-                <img src="/assets/kipepeologoREMASTEREDTEXTwhite.svg" className="w-full h-auto" alt="Kipepeo Aerospace Logo" />
+                <img src="/assets/kipepeologoTAGLINEWHITE.png" className="w-full h-auto" alt="Kipepeo Aerospace Logo" />
               </div>
             </motion.div>
 

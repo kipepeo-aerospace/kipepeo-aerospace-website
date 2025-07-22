@@ -1,28 +1,38 @@
 import React from 'react';
-import { Plane, Code, Linkedin, Mail } from 'lucide-react';
+import { Plane, Code, Wrench, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Team: React.FC = () => {
   const founders = [
     {
       name: 'Brian Lembuss',
-      role: 'CEO & Co-founder',
-      description: 'B.Sc, M.Sc Aerospace Engineering. Experienced in UAS systems and business development.',
+      role: 'Co-founder',
+      description: 'B.Sc, M.Sc Aerospace Engineering.',
       icon: Plane,
-      expertise: ['UAS Systems', 'Business Development', 'Aerospace Engineering'],
-      gradient: 'from-kipepeo-green to-kipepeo-dark-green',
+      expertise: ['UAS Design', 'Aerospace Systems', 'Business Development'],
+      gradient: 'from-kipepeo-black to-kipepeo-green',
       email: 'mailto:lembuss@kipepeo.space',
       linkedin: 'https://www.linkedin.com/in/brian-kipchumba-lembuss-kirwa/'
 
     },
     {
+      name: 'Richard Wanjohi',
+      role: 'Co-founder',
+      description: 'B.Sc Electrical and Electronics Engineering.',
+      icon: Wrench,
+      expertise: ['Electronic Hardware', 'Hardware-Sotfware Integration', 'Autonomy'],
+      gradient: 'from-kipepeo-black to-kipepeo-green',
+      email: 'mailto:info@kipepeo.space',
+      linkedin: 'https://www.linkedin.com/in/richard-wanjohi-sendeu-a60628141//'
+    },
+    {
       name: 'Adrian Kiplimo',
-      role: 'CTO & Co-founder',
-      description: 'B.Sc Computer Science. Experienced in IoT, full-stack software, and embedded systems.',
+      role: 'Co-founder',
+      description: 'B.Sc Computer Science.',
       icon: Code,
       expertise: ['IoT Development', 'Full-Stack Software', 'Embedded Systems'],
       gradient: 'from-kipepeo-black to-kipepeo-green',
-      email: 'mailto:akiplimo@kipepeo.space',
+      email: 'mailto:info@kipepeo.space',
       linkedin: 'https://www.linkedin.com/in/adrian-kiplimo/'
     }
   ];
@@ -51,7 +61,7 @@ const Team: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-12 max-w-5xl mx-auto">
           {founders.map((founder, index) => (
             <motion.div
               key={index}
