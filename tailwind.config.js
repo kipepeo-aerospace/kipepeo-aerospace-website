@@ -35,7 +35,7 @@ export default {
         },
       },
       backgroundImage: {
-        'hero-pattern': "linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(34, 197, 94, 0.85) 100%)",
+        'hero-pattern': "linear-gradient(135deg, rgba(26, 26, 26, 0) 0%, rgba(34, 197, 94, 0) 100%)",
         'wave-pattern': "url('data:image/svg+xml,%3Csvg width=\"1200\" height=\"120\" viewBox=\"0 0 1200 120\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z\" fill=\"%23fafafa\"/%3E%3C/svg%3E')",
       },
     },

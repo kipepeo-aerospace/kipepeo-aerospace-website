@@ -6,34 +6,25 @@ const Team: React.FC = () => {
   const founders = [
     {
       name: 'Brian Lembuss',
-      role: 'Co-founder',
+      role: 'Co-founder, CEO',
       description: 'B.Sc, M.Sc Aerospace Engineering.',
       icon: Plane,
-      expertise: ['UAS Design', 'Aerospace Systems', 'Business Development'],
+      image: '/assets/lembuss.jpg',
+      expertise: ['Aircraft Systems & UAS Design', 'Hardware-Software', 'Business Development'],
       gradient: 'from-kipepeo-black to-kipepeo-green',
       email: 'mailto:lembuss@kipepeo.space',
       linkedin: 'https://www.linkedin.com/in/brian-kipchumba-lembuss-kirwa/'
 
     },
     {
-      name: 'Richard Wanjohi',
-      role: 'Co-founder',
-      description: 'B.Sc Electrical and Electronics Engineering.',
-      icon: Wrench,
-      expertise: ['Electronic Hardware', 'Hardware-Sotfware Integration', 'Autonomy'],
+      name: 'Brian Kihumba',
+      role: 'Co-founder, COO',
+      description: 'Bachelor of Law (LL.B)., MBA (in progress).',
+      image: '/assets/kimani.jpg',
+      expertise: ['Operations & Business Development', 'Legal & Compliance', 'CRM & Sales Strategy'],
       gradient: 'from-kipepeo-black to-kipepeo-green',
-      email: 'mailto:info@kipepeo.space',
-      linkedin: 'https://www.linkedin.com/in/richard-wanjohi-sendeu-a60628141//'
-    },
-    {
-      name: 'Adrian Kiplimo',
-      role: 'Co-founder',
-      description: 'B.Sc Computer Science.',
-      icon: Code,
-      expertise: ['IoT Development', 'Full-Stack Software', 'Embedded Systems'],
-      gradient: 'from-kipepeo-black to-kipepeo-green',
-      email: 'mailto:info@kipepeo.space',
-      linkedin: 'https://www.linkedin.com/in/adrian-kiplimo/'
+      email: 'mailto:kihumba@kipepeo.space',
+      linkedin: 'https://www.linkedin.com/in/brian-kihumba-711873a9/'
     }
   ];
 
@@ -61,7 +52,7 @@ const Team: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-12 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {founders.map((founder, index) => (
             <motion.div
               key={index}
@@ -82,11 +73,18 @@ const Team: React.FC = () => {
 
                   <div className="relative z-10 text-center">
                     <motion.div
-                      className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl w-20 h-20 mx-auto mb-6"
+                      className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl w-48 h-48 mx-auto mb-6"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <founder.icon className="h-12 w-12 text-white" />
+                      {founder.image ? (
+                        <img
+                          src={founder.image}
+                          alt={founder.name}
+                          className="w-full h-full object-cover rounded-2xl"
+                        />
+                      ) : (<founder.icon className="w-full h-full text-white/80" />
+                      )}
                     </motion.div>
 
                     <h3 className="text-2xl md:text-3xl font-bold font-heading mb-2">

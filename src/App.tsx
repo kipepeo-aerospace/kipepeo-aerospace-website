@@ -17,9 +17,9 @@ function App() {
       <Vision />
       <CoreValues />
       <Milestones />
+      <FlagshipProject />
       <TargetSectors />
       <Team />
-      <FlagshipProject />
       <Contact />
     </div>
   );

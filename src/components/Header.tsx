@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
+          ? 'backdrop-blur-md shadow-lg'
           : 'bg-transparent'
           }`}
       >
@@ -207,7 +207,7 @@ const Header: React.FC = () => {
                 <span>Visit Kilimo Anga</span>
                 <ExternalLink className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </motion.a>
-
+              {/*
               <motion.button
                 onClick={() => scrollToSection('about')}
                 className="inline-flex items-center space-x-2 border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 backdrop-blur-sm hover:bg-white/10"
@@ -216,6 +216,7 @@ const Header: React.FC = () => {
               >
                 <span>Learn More</span>
               </motion.button>
+              */}
             </motion.div>
           </motion.div>
         </div>
