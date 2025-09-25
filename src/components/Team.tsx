@@ -21,7 +21,7 @@ const Team: React.FC = () => {
       role: 'Co-founder, COO',
       description: 'Bachelor of Law (LL.B)., MBA (in progress).',
       image: '/assets/kimani.jpg',
-      expertise: ['Operations & Business Development', 'Legal & Compliance', 'CRM & Sales Strategy'],
+      expertise: ['Business Operations & Development', 'Legal & Compliance', 'CRM & Sales Strategy'],
       gradient: 'from-kipepeo-black to-kipepeo-green',
       email: 'mailto:kihumba@kipepeo.space',
       linkedin: 'https://www.linkedin.com/in/brian-kihumba-711873a9/'
