@@ -6,7 +6,7 @@ const Team: React.FC = () => {
   const founders = [
     {
       name: 'Brian Lembuss',
-      role: 'Co-founder, CEO',
+      role: 'Founder, CEO',
       description: 'B.Sc, M.Sc Aerospace Engineering.',
       icon: Plane,
       image: '/assets/lembuss.jpg',
@@ -19,7 +19,7 @@ const Team: React.FC = () => {
     {
       name: 'Brian Kihumba',
       role: 'Co-founder, COO',
-      description: 'Bachelor of Law (LL.B)., MBA (in progress).',
+      description: 'Bachelor of Laws, MBA, Business Administration.',
       image: '/assets/kimani.jpg',
       expertise: ['Business Operations & Development', 'Legal & Compliance', 'CRM & Sales Strategy'],
       gradient: 'from-kipepeo-black to-kipepeo-green',
