@@ -165,7 +165,7 @@ const Header: React.FC = () => {
             className="max-w-5xl mx-auto"
           >
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-8 leading-tight"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-8 leading-tight invisible"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -180,7 +180,7 @@ const Header: React.FC = () => {
                 Africa's Skies
               </motion.span>
             </motion.h1>
-
+            
             <motion.p
               className="text-xl md:text-2xl lg:text-3xl mb-12 text-green-100 max-w-3xl mx-auto font-light leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
@@ -207,16 +207,6 @@ const Header: React.FC = () => {
                 <span>Visit Kilimo Anga</span>
                 <ExternalLink className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </motion.a>
-              {/*
-              <motion.button
-                onClick={() => scrollToSection('about')}
-                className="inline-flex items-center space-x-2 border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 backdrop-blur-sm hover:bg-white/10"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>Learn More</span>
-              </motion.button>
-              */}
             </motion.div>
           </motion.div>
         </div>

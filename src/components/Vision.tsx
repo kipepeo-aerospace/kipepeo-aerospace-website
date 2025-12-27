@@ -56,10 +56,10 @@ const Vision: React.FC = () => {
               className="space-y-8"
             >
               <p className="text-xl md:text-2xl text-kipepeo-black leading-relaxed font-light">
-                By integrating{' '}
-                <span className="font-semibold text-kipepeo-green">aerospace and software engineering</span>{' '}
-                with{' '}
-                <span className="font-semibold text-kipepeo-green">IoT technologies</span>, we deliver durable, cost-efficient, and easy-to-use solutions—built to redefine aerospace innovation across Kenya and the greater African region.
+                The vision is clear: to build {' '}
+                <span className="font-semibold text-kipepeo-green">smarter, sustainable</span>{' '}
+                solutions through{' '}
+                <span className="font-semibold text-kipepeo-green">UAS innovation</span> Kipepeo designs and deploys aerial systems that are modular, scalable, and accessible—lowering barriers to adoption while fostering local skills development.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -94,7 +94,7 @@ const Vision: React.FC = () => {
                   <ul className="space-y-3 text-lg">
                     <li className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-kipepeo-light-green rounded-full" />
-                      <span>Durable Solutions</span>
+                      <span>Adaptable Solutions</span>
                     </li>
                     <li className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-kipepeo-light-green rounded-full" />
