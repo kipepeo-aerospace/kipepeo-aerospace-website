@@ -1,0 +1,16 @@
+{/*<motion.h1
+              className="text-2xl md:text-2xl lg:text-5xl font-bold font-heading mb-8 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Engineering Excellence for Africa's Skies
+              <motion.span
+                className="block text-kipepeo-light-green"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
+                Africa's Skies
+              </motion.span>
+            </motion.h1>*/}

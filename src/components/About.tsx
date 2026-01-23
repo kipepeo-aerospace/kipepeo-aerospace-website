@@ -38,7 +38,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Kipepeo Aerospace
+              About Us
             </motion.h2>
           </motion.div>
           <motion.div

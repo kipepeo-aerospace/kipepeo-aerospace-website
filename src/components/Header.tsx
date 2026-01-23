@@ -24,8 +24,6 @@ const Header: React.FC = () => {
 
   const navItems = [
     { label: 'About', id: 'about' },
-    { label: 'Vision', id: 'vision' },
-    { label: 'Values', id: 'values' },
     { label: 'Journey', id: 'journey' },
     { label: 'Team', id: 'team' },
     { label: 'Contact', id: 'contact' },
@@ -67,20 +65,6 @@ const Header: React.FC = () => {
                   {item.label}
                 </button>
               ))}
-              <motion.a
-                href="https://kilimoanga.kipepeo.space"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${isScrolled
-                  ? 'bg-kipepeo-green hover:bg-kipepeo-dark-green text-white'
-                  : 'bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm'
-                  }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>Visit Kilimo Anga</span>
-                <ExternalLink className="h-4 w-4" />
-              </motion.a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -111,15 +95,6 @@ const Header: React.FC = () => {
                   {item.label}
                 </button>
               ))}
-              <a
-                href="https://kilimoanga.kipepeo.space"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-kipepeo-green text-white px-6 py-3 rounded-full font-semibold w-fit"
-              >
-                <span>Visit Kilimo Anga</span>
-                <ExternalLink className="h-4 w-4" />
-              </a>
             </div>
           </motion.div>
         )}
@@ -131,8 +106,7 @@ const Header: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/assets/TAI_Top.png')",
-            /* backgroundImage: `url('https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`*/
+            backgroundImage: "url('/assets/TAI_Bottom.png')",
           }}
         />
         <div className="absolute inset-0 bg-hero-pattern" />
@@ -157,7 +131,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-6 text-center text-white">
+        <div className="relative z-10 container mx-auto px-6 text-center text-white min-h-screen flex items-end pb-16 md:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -165,29 +139,20 @@ const Header: React.FC = () => {
             className="max-w-5xl mx-auto"
           >
             <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-8 leading-tight invisible"
+              className="text-3xl md:text-3xl lg:text-5xl text-green-100 mb-4 md:mb-8 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Engineering Excellence for
-              <motion.span
-                className="block text-kipepeo-light-green"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                Africa's Skies
-              </motion.span>
+              Building UAS Technology for Smarter, Sustainable Solutions
             </motion.h1>
-            
             <motion.p
-              className="text-xl md:text-2xl lg:text-3xl mb-12 text-green-100 max-w-3xl mx-auto font-light leading-relaxed"
+              className="text-l md:text-2xl lg:text-3xl mb-6 md:mb-12 max-w-3xl mx-auto font-light leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Building Drone Technology to Deliver Smarter, Sustainable Solutions .
+              Engineering Excellence for Africa's Skies
             </motion.p>
 
             <motion.div
@@ -204,7 +169,7 @@ const Header: React.FC = () => {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span>Visit Kilimo Anga</span>
+                <span>Explore Kilimo Anga</span>
                 <ExternalLink className="h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </motion.a>
             </motion.div>

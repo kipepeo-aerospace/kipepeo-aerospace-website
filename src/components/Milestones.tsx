@@ -14,21 +14,21 @@ const Milestones: React.FC = () => {
     {
       year: '2024',
       title: 'Company Founded',
-      description: 'Company formally founded, pilot prototype development for Kilimo Anga flagship project begins',
+      description: 'Company formally founded, vision and strategy alignment, initial team formation',
       icon: CheckCircle,
       status: 'completed'
     },
     {
       year: '2025',
-      title: 'Prototype Launch',
-      description: 'Targeting pre-seed funding for Kilimo Anga prototype testing, developing partnerships in the sector',
+      title: 'Prototype Development',
+      description: 'Development of the Kilimo Anga digital prototype, building partnerships and customer relationships within the ecosystem',
       icon: Clock,
       status: 'current'
     },
     {
       year: '2026',
-      title: 'First Demo',
-      description: 'First public demo flight and funding round to enable scaling of the Kilimo Anga initiative',
+      title: 'Pilot Deployment',
+      description: 'Kilimo Anga Pilot deployment, targeting preseed funding to faciliatet scalable growth',
       icon: Star,
       status: 'upcoming'
     },

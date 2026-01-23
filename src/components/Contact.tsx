@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
             className="border-t border-white/20 pt-8 text-center"
           >
             <p className="text-green-200 text-sm mb-4">
-              © 2025 Kipepeo Aerospace. All rights reserved.
+              © 2026 Kipepeo Aerospace. All rights reserved.
             </p>
             <p className="text-green-300 text-xs max-w-2xl mx-auto">
               This website provides general information about Kipepeo Aerospace.

@@ -8,6 +8,7 @@ import TargetSectors from './components/TargetSectors';
 import FlagshipProject from './components/FlagshipProject';
 import Team from './components/Team';
 import Contact from './components/Contact';
+import Verticals from './components/Verticals';
 
 function App() {
   return (
@@ -15,10 +16,9 @@ function App() {
       <Header />
       <About />
       <Vision />
-      <CoreValues />
-      <Milestones />
+      <Verticals  />
       <FlagshipProject />
-      <TargetSectors />
+      <Milestones />
       <Team />
       <Contact />
     </div>

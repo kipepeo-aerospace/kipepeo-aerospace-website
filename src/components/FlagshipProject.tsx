@@ -63,7 +63,7 @@ const FlagshipProject: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Our Flagship Project:
+              Our Flagship Product:
               <span className="block text-kipepeo-light-green mt-2">Kilimo Anga</span>
             </motion.h2>
           </motion.div>
@@ -77,11 +77,9 @@ const FlagshipProject: React.FC = () => {
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
               <p className="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto font-light mb-8">
-                Kilimo Anga is a precision agriculture initiative leveraging{' '}
-                <span className="font-semibold text-kipepeo-light-green">drone-based photogrammetry</span>{' '}
-                and{' '}
-                <span className="font-semibold text-kipepeo-light-green">multispectral imaging</span>. 
-                It delivers actionable farm-level insights that empower agri-service providers, drone operators, and agribusinesses to make smarter input decisions, reduce waste, and improve yields.
+                Kilimo Anga is a drone-enabled agricultural extension service offered by Kipepeo Aerospace. 
+                It supports farmers with timely, field-specific crop insights derived from aerial imagery and data analysis. 
+                These insights help farmers identify early signs of crop stress, variability, and potential yield loss, enabling more targeted interventions across their fields. 
               </p>
 
               {/* Features Grid */}

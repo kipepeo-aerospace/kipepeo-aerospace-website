@@ -19,34 +19,6 @@ const Vision: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <motion.div
-              className="inline-flex items-center justify-center mb-8"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="bg-gradient-to-br from-kipepeo-black to-kipepeo-green p-4 rounded-2xl shadow-lg">
-                <Eye className="h-10 w-10 text-white" />
-              </div>
-            </motion.div>
-
-            <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-kipepeo-black mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Our Vision
-            </motion.h2>
-          </motion.div>
-
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -59,7 +31,7 @@ const Vision: React.FC = () => {
                 The vision is clear: to build {' '}
                 <span className="font-semibold text-kipepeo-green">smarter, sustainable</span>{' '}
                 solutions through{' '}
-                <span className="font-semibold text-kipepeo-green">UAS innovation</span> Kipepeo designs and deploys aerial systems that are modular, scalable, and accessible—lowering barriers to adoption while fostering local skills development.
+                <span className="font-semibold text-kipepeo-green">UAS innovation</span> Kipepeo designs and deploys aerial systems that are modular, scalable, and accessible—lowering barriers to adoption across multiple sectors.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
