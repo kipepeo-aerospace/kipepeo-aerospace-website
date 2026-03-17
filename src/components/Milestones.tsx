@@ -28,7 +28,7 @@ const Milestones: React.FC = () => {
     {
       year: '2026',
       title: 'Pilot Deployment',
-      description: 'Kilimo Anga Pilot deployment, targeting preseed funding to faciliatet scalable growth',
+      description: 'Kilimo Anga Pilot deployment, targeting preseed funding to facilitate scalable growth',
       icon: Star,
       status: 'upcoming'
     },
