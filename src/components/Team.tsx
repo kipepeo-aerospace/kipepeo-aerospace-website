@@ -20,7 +20,7 @@ const Team: React.FC = () => {
       name: 'Brian Kihumba',
       role: 'Co-founder, COO',
       description: 'Bachelor of Laws, MBA, Business Administration.',
-      image: '/assets/kimani.jpg',
+      image: '/assets/profi-b.png',
       expertise: ['Business Operations & Development', 'Legal & Compliance', 'CRM & Sales Strategy'],
       gradient: 'from-kipepeo-black to-kipepeo-green',
       email: 'mailto:kihumba@kipepeo.space',
