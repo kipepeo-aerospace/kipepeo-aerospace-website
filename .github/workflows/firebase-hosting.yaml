@@ -1,0 +1,51 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    # Only run if we are pushing to main, or working on an active PR (not closing it)
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Application
+        run: npm run build
+
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          projectId: kipepeo-infrastructure
+          target: kipepeoaerospace
+          # If it's a push to main, it goes live. If it's a PR, it makes a preview URL.
+          channelId: ${{ github.event_name == 'push' && 'live' || '' }}
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+  close_pull_request:
+    # Only run when a PR is merged or closed
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tear Down Preview Channel
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          projectId: kipepeo-infrastructure
+          target: kipepeoaerospace
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
