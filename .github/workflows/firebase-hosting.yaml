@@ -11,7 +11,6 @@ on:
 
 jobs:
   build_and_deploy:
-    # Only run if we are pushing to main, or working on an active PR (not closing it)
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
 
@@ -25,27 +24,26 @@ jobs:
       - name: Build Application
         run: npm run build
 
-      - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          projectId: kipepeo-infrastructure
-          target: kipepeoaerospace
-          # If it's a push to main, it goes live. If it's a PR, it makes a preview URL.
-          channelId: ${{ github.event_name == 'push' && 'live' || '' }}
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Deploy to Firebase Live
+        if: github.event_name == 'push'
+        run: |
+          firebase deploy --only hosting:kipepeoaerospace --token "${{ secrets.FIREBASE_TOKEN }}" --project kipepeo-infrastructure
+
+      - name: Deploy to Firebase Preview Channel
+        if: github.event_name == 'pull_request'
+        run: |
+          firebase hosting:channel:deploy pr-${{ github.event.number }} --only hosting:kipepeoaerospace --token "${{ secrets.FIREBASE_TOKEN }}" --project kipepeo-infrastructure
 
   close_pull_request:
-    # Only run when a PR is merged or closed
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
       - name: Tear Down Preview Channel
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          projectId: kipepeo-infrastructure
-          target: kipepeoaerospace
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: |
+          firebase hosting:channel:delete pr-${{ github.event.number }} --force --only hosting:kipepeoaerospace --token "${{ secrets.FIREBASE_TOKEN }}" --project kipepeo-infrastructure
